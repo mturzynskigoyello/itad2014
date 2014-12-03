@@ -10,3 +10,9 @@ C:\Users\compi_000\Desktop\ITAD2014\bin\ITAD2014.pdb
 C:\Users\compi_000\Desktop\ITAD2014\obj\Debug\ITAD2014.csprojResolveAssemblyReference.cache
 C:\Users\compi_000\Desktop\ITAD2014\obj\Debug\ITAD2014.dll
 C:\Users\compi_000\Desktop\ITAD2014\obj\Debug\ITAD2014.pdb
+C:\Users\compi_000\Desktop\git\itad2014\bin\ITAD2014.dll.config
+C:\Users\compi_000\Desktop\git\itad2014\bin\ITAD2014.dll
+C:\Users\compi_000\Desktop\git\itad2014\bin\ITAD2014.pdb
+C:\Users\compi_000\Desktop\git\itad2014\obj\Debug\ITAD2014.csprojResolveAssemblyReference.cache
+C:\Users\compi_000\Desktop\git\itad2014\obj\Debug\ITAD2014.dll
+C:\Users\compi_000\Desktop\git\itad2014\obj\Debug\ITAD2014.pdb
