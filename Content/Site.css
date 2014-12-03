@@ -1,0 +1,21 @@
+﻿body {
+    padding-top: 50px;
+}
+
+.starter-template {
+    padding: 40px 15px;    
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.starter-template h1 {
+    text-align: center;
+}
+
+.product-quantity-positive {
+    color: green;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}

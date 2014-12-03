@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ITAD2014 Sample TypeScript app</title>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content\Site.css" rel="stylesheet">
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    
+    <script src="Scripts/models/Product.js"></script>
+    <script src="Scripts/services/ShoppingCartService.js"></script>
+    <script src="Scripts/controllers/ShoppingCartController.js"></script>
+    <script src="Scripts/app.js"></script>
+
+</head>
+
+<body ng-app="ShoppingCart">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Shopping cart</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="Default.html">The right way</a></li>
+                    <li><a href="Legacy.html">Legacy code</a></li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="starter-template"
+             ng-controller="shoppingCartController as controller">
+            <h1>Shopping cart</h1>
+
+            <div ng-repeat="product in controller.products"
+                 class="row mt-10"
+                 ng-class="{'product-quantity-positive': product.quantity > 0}">
+                <div class="col-md-4">
+                    {{product.name}}
+                </div>
+                <div class="col-md-4">
+                    {{product.price | currency}} * {{product.quantity}} = {{product.price * product.quantity | currency}}
+                </div>
+                <div class="col-md-4">
+                    <button type="button" 
+                            ng-click="controller.decreaseQuantity(product)" 
+                            class="btn btn-default">-</button>
+                    <button type="button" 
+                            ng-click="controller.increaseQuantity(product)" 
+                            class="btn btn-default">+</button>
+                </div>
+            </div>
+
+            <div class="row mt-10">
+                <div class="col-md-8">
+                    <button type="button" 
+                            ng-click="controller.clear()" 
+                            class="btn btn-default">Clear</button>
+                </div>
+                <div class="col-md-4">
+                    {{controller.totalValue | currency}}
+                </div>                
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
